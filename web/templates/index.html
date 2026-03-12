@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de Senhas</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.container {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.options {
+    margin-top: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+.password-box {
+    margin-top: 20px;
+    background: #020617;
+    padding: 10px;
+    border-radius: 5px;
+    word-break: break-all;
+}
+
+.strength-bar {
+    margin-top: 10px;
+    height: 10px;
+    background: #334155;
+    border-radius: 10px;
+}
+
+.strength-fill {
+    height: 10px;
+    border-radius: 10px;
+}
+.veryweak { background: #ef4444; width: 5%; }
+.weak { background: #f59e0b; width: 25%; }
+.medium { background: #02aff3; width: 50%; }
+.strong { background: #049e3c; width: 75%; }
+.verystrong { background: #10b981; width: 100%; }
+
+.error {
+    color: #ef4444;
+    margin-top: 10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Gerador de Senhas</h2>
+
+<form action="/generate" method="post">
+
+<label>Password Length</label>
+<input type="number" name="length" value="12" min="6" max="64">
+
+<div class="options">
+
+<label><input type="checkbox" name="uppercase"> Maiúsculas</label><br>
+<label><input type="checkbox" name="lowercase"> Minúsculas</label><br>
+<label><input type="checkbox" name="numbers"> Números</label><br>
+<label><input type="checkbox" name="symbols"> Símbolos</label>
+
+</div>
+
+<button type="submit">Gerar Senha</button>
+
+</form>
+
+{% if error %}
+
+<p class="error">{{ error }}</p>
+
+{% endif %}
+
+{% if password %}
+
+<div class="password-box">
+{{ password }}
+</div>
+
+<p>Força: {{ strength }}</p>
+
+<div class="strength-bar">
+    <div class="strength-fill
+        {% if strength == 'Muito Fraca' %}veryweak{% endif %}
+        {% if strength == 'Fraca' %}weak{% endif %}
+        {% if strength == 'Média' %}medium{% endif %}
+        {% if strength == 'Forte' %}strong{% endif %}
+        {% if strength == 'Muito Forte' %}verystrong{% endif %}
+    ">
+    </div>
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
