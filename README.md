@@ -8,16 +8,19 @@ O objetivo deste projeto é demonstrar habilidades em **backend, infraestrutura,
 
 # 🚀 Funcionalidades
 
-- Geração de senhas seguras
-- Definição do tamanho da senha
-- Seleção de tipos de caracteres:
+- Geração de senhas seguras 
+- Definição do tamanho da senha 
+- Seleção de tipos de caracteres: 
   - Letras maiúsculas
   - Letras minúsculas
   - Números
   - Símbolos
-- Avaliação da força da senha
-- Barra visual indicando a força da senha
-- Interface web simples
+- Avaliação da força da senha 
+- Barra visual indicando a força da senha 
+- Interface web simples 
+- log estruturado em Json :
+  - informação sobre senha gerada
+  - captura de erros de de validação
 
 ---
 
@@ -51,7 +54,8 @@ password-generator
 ├── src
 │ ├── generator.py
 │ ├── strength.py
-│ └── cli.py
+│ ├── cli.py
+│ └── strength.py
 │
 ├── web
 │ ├── server.py

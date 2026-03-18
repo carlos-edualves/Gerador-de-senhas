@@ -20,6 +20,9 @@ def generate_password(length, use_numbers, use_symbols, use_uppercase, use_lower
     if use_symbols:
         characters += string.punctuation
 
+    if length < 6:
+        raise ValueError("Poucos caracteres!")
+
     if not characters:
         raise ValueError("Você precisa selecionar pelo menos uma opção!")
 
