@@ -10,7 +10,7 @@ O objetivo deste projeto é demonstrar habilidades em **backend, infraestrutura,
 
 ### 📸 Preview
 
-![App Screenshot](assets/interface.png)
+![App Screenshot](assets/interface.PNG)
 
 ---
 
