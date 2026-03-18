@@ -1,8 +1,16 @@
-# 🔐 Password Generator Platform
+
+
+## 🔐 Gerador de Senhas
+
+Interface simples para geração de senhas seguras com avaliação de força.
 
 Um gerador de senhas desenvolvido em **Python com FastAPI**, criado inicialmente como um projeto simples e que será evoluído para uma **plataforma completa com práticas modernas de DevOps, Cloud e Observabilidade**.
 
 O objetivo deste projeto é demonstrar habilidades em **backend, infraestrutura, containerização, Kubernetes e monitoramento**, transformando um serviço simples em uma aplicação **cloud-native**.
+
+### 📸 Preview
+
+![App Screenshot](assets/interface.png)
 
 ---
 
